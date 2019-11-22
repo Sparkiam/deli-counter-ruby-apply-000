@@ -1,5 +1,4 @@
 # Write your code here.
- new_deli = []
  
  
 def line(deli)
@@ -21,11 +20,25 @@ end
  
  
 def take_a_number(new_deli, name) 
-  new_deli << name 
+    new_deli << name 
   puts "Welcome, #{name}. You are number #{new_deli.length} in line."
 end 
   
   
+  $ticket_number = 0 
+  
+def take_a_number(deli)
+  $ticket_number += 1 
+  deli << $ticket_number
+  puts "Welcome, You are #{deli} #{deli.length} in line"
+end 
+
+
+
+
+
+
+
   def now_serving(new_deli)
     if new_deli.length < 1 
       puts "There is nobody waiting to be served!"
